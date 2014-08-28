@@ -1,0 +1,25 @@
+{
+  "name": "angular-do",
+  "version": "0.0.0",
+  "description": "Angular Examples Using developers.do API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jhenriquez/angular-do"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhenriquez/angular-do/issues"
+  },
+  "homepage": "https://github.com/jhenriquez/angular-do",
+  "dependencies": {
+    "express": "~4.8.6",
+    "request": "~2.40.0",
+    "consolidate": "~0.10.0",
+    "ejs": "~1.0.0"
+  }
+}

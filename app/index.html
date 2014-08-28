@@ -1,8 +1,57 @@
-!DOCTYPE html
+<!DOCTYPE html>
 <html>
   <head>
+  	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   </head>
-  <body>
-    Hello, Angular!
+  <body ng-app="angular-do">
+  	
+  	<div class="row">
+  		<div class="col-md-12">
+  			<span class="text-center">
+  				<h2>Hello, Angular! (Again)</h2>
+  			</span>
+  			<span class="text-center">
+  				<p>With even more illustrated examples!</p>
+  			</span>
+  		</div>
+  	</div>
+
+  	<section ng-controller="ProvincesController">
+	  	<div class="row">
+	  		<div class="col-md-8 col-md-offset-2">
+	  			<h3 class="page-header">Provinces Example</h3>
+	  			<h5>The Use of the Query in resources</h5>
+	  		</div>
+	  		<div class="col-md-4 col-md-offset-4">
+	  			<div class="form-group">
+	  				<label for="provinces">Provinces</label>
+	  				<select name="provinces" class="form-control" ng-model="selected">
+	  					<option ng-repeat="province in serviceProvinces" value="{{province}}">{{province.nombre}}</option>
+	  				</select>
+	  				<br />
+	  				<button class="btn btn-primary" ng-click="addProvince()">Add</button>
+	  			</div>
+	  		</div>
+	  	</div>
+	  	<div class="col-md-4 col-md-offset-4">
+	  		<ul class="list-group">
+	  			<li class="list-group-item alert-info" ng-repeat="province in myProvinces track by $index">
+	  				({{province.id}}) {{province.nombre}}
+	  			</li>
+	  		</ul>
+		</div>
+  	</section>
+
+    
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-resource.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <script src="scripts/jquery-1.9.1.js"></script>
+    <script src="scripts/jquery-1.9.1.js"></script>
+    <script src="scripts/bootstrap.js"></script>
+
+    <script src="scripts/app/angular-do.js"></script>
+    <script src="scripts/app/angular-do-factories.js"></script>
+    <script src="scripts/app/angular-do-controllers.js"></script>
   </body>
 </html>
